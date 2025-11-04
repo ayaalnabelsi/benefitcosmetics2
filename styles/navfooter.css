@@ -1,0 +1,496 @@
+@font-face {
+    font-family: "obviously-medium";
+    src: url("../fonts/Obviously-Medium.woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "obviously-narrow";
+    src: url("../fonts/Obviously-Narrow_Bold.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "obviously-regular";
+    src: url("../fonts/Obviously-Regular.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "obviously-super";
+    src: url("../fonts/Obviously-Super.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "roslindale-display";
+    src: url("../fonts/Roslindale-DisplayUltra.woff2");
+    font-weight: 400;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    /* color-scheme: light dark;
+
+    --background-color: light-dark(#fcead8,#e6005c);
+    --footer-color: #fff4eb;
+    --secondarycolor-background: #ffff;
+    --textcolor: black;
+    --color-background: #eee;
+    --rozebacground-color: #fccad9;
+    --deeppinkbackground-color: #fc91dc;
+    --button-color: black;
+    --socialmediaicon-background: #e6005c;
+    --colortext2: #ff0064; */
+    color-scheme: light dark;
+
+    /* Achtergrondkleuren */
+    --background-color: light-dark(#fcead8, black);
+    --secondarycolor-background: light-dark(#ffffff, #ff0064);
+    --button-color: light-dark(#000000, #ffb6c1);
+    --color-background: light-dark(#eeeeee, black);
+    --rozebacground-color: light-dark(#fccad9, #ff4b9b);
+    --tweedefooter: light-dark(#fcead8, black);
+    --ulcolor: light-dark(#fccad9, black);
+
+    --footer-color: light-dark(#fff4eb, #ff66a3);
+    --footercolor: light-dark(#ffffff, #ff4b9b);
+    --detailscolor: light-dark(#ff4b9b, black);
+    --textcolor: #000000;
+    --textcolor1: #ffffff;
+    --textcolor3: light-dark(#ffffff, black);
+    --textcolor2: light-dark(black, #ffffff);
+    --colortext2: light-dark(#ff0064, #ff66a3);
+
+    --button: light-dark(black, #ffffff);
+    --deeppinkbackground-color: light-dark(#fc91dc, #a8006a);
+    --socialmediaicon-background: light-dark(black, #ff0064);
+}
+
+ 
+
+svg rect {
+    fill: var(--socialmediaicon-background);
+}
+
+/*hiermee de kleur van de iconen verander*/
+
+
+
+
+/*************/
+/* DE HEADER */
+/*************/
+
+/*************/
+/*Hamburger menu*/
+/*************/
+header {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    background-color: var(--footercolor);
+}
+
+header h1 {
+    justify-content: center;
+    font-size: larger;
+    font-weight: 200;
+}
+
+/*menu img*/
+header img {
+    width: 2.3em;
+}
+
+
+/* Geholpen door Viresh */
+header button,
+div nav button {
+    background-color: inherit;
+    border: none;
+}
+
+/*************/
+/*memu button*/
+/*************/
+header button {
+    order: -1;
+    justify-self: start;
+    padding-top: 1em;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--footercolor);
+    /* helemaal uit beeld Verplaatsen*/
+    translate: -100%;
+    transition: 2s;
+
+}
+
+div nav:nth-of-type(1) {
+    margin-left: 1em;
+    background-color: var(--footercolor);
+}
+
+div nav:nth-of-type(1) ul a {
+    font-family: "rosalindale-display";
+    font-size: 1.2em;
+}
+
+div nav:nth-of-type(2) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: var(--tweedefooter);
+}
+
+
+div nav:nth-of-type(2) ul a {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0;
+}
+
+
+div nav:nth-of-type(2) ul img {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+div nav:nth-of-type(2) ul p {
+    font-size: small;
+
+}
+
+/*************/
+/*linkjes in de nav*/
+/*************/
+div ul:nth-of-type(1) {
+    list-style: none;
+    font-family: "Obviously-Narrow";
+    font-size: small;
+}
+
+/*************/
+/* als het menu open is*/
+/*************/
+div.toonMenu {
+    translate: 0% 0%;
+}
+
+/*************/
+/*als het menu open is*/
+/*************/
+div.is-open {
+    translate: 0%;
+}
+
+/*************/
+/*ALS DE BROWSER MINIMAAL 38EM BREED IS*/
+/*************/
+@media (min-width:38em) {
+    header {
+        grid-template-rows: min-content min-content;
+    }
+
+    header>button {
+        display: none;
+    }
+
+    h1 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    div {
+        display: contents;
+        position: static;
+        translate: 0;
+        background: none;
+    }
+
+    div nav:nth-of-type(1) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        justify-self: center;
+    }
+
+    div nav:nth-of-type(2) a {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    div button {
+        display: none;
+    }
+
+    div ul {
+        display: flex;
+        gap: 1em;
+        list-style: none;
+    }
+
+    div a {
+        border: none;
+        flex-direction: column;
+    }
+
+    header>a:last-of-type {
+        flex-direction: column;
+    }
+}
+
+/*************/
+/*Header als de browser minimaal 57em breed is*/
+/*************/
+
+@media (min-width:57em) {
+    div {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    div a {
+        flex-direction: row;
+        font-family: "obviously-regular";
+
+
+    }
+
+    div nav:nth-of-type(2) {
+        display: contents;
+    }
+
+}
+
+/* Bron: https://codepen.io/ayaalnabelsi/pen/RNrPrWW */
+
+
+
+
+
+/*************/
+/*FOOTER*/
+/*************/
+footer {
+    background-color: var(--background-color);
+    padding: 1em;
+    position: relative;
+    display: grid;
+    padding-bottom: 2em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Gebasseerd op etc*/
+footer p {
+    font-size: x-small;
+}
+
+/*benefit img*/
+footer>img {
+    width: 25%;
+    justify-self: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+
+}
+
+/*************/
+/*WINKEL ZOEKEN&NEDERLAND*/
+/*************/
+a {
+    font-size: x-small;
+    font-family: "Obviously-Regular";
+    text-decoration: none;
+    color: var(--textcolor2);
+    line-height: 2.5em;
+}
+
+/*Ruimte tussen a */
+details li a {
+    line-height: 2.5em;
+
+}
+
+/*over & toegankelijkheid*/
+summary,
+footer>a {
+    font-size: small;
+    font-family: "Obviously-Narrow";
+    text-transform: uppercase;
+}
+
+footer details:nth-of-type(1) a:hover {
+    text-decoration: underline;
+}
+
+footer details:nth-of-type(2) a:hover {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*************/
+/* OVER & TOEGANKELIJKHEID*/
+/*************/
+details summary {
+    justify-content: center;
+
+}
+
+/*************/
+/* OVER */
+/*************/
+footer details ul {
+    list-style: none;
+}
+
+/*************/
+/*SOCIAL MEDIA ICONS*/
+/*************/
+footer>ul:first-of-type {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+footer>ul:last-of-type svg {
+    display: block;
+    width: 3.5em;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+/*Behandeling page*/
+/*HEB JE VRAGEN*/
+footer section:nth-of-type(1) {
+    background-color: var(--rozebacground-color);
+}
+
+
+/*************/
+/*  Pijltje Styling*/
+/*************/
+summary {
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr max-content min-content;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+footer summary::after {
+    content: '';
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 0.9em;
+    background: url('https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg') no-repeat;
+    transition: 0.2s;
+
+}
+
+footer details[open]>summary::after {
+    transform: rotate(180deg);
+}
+
+/*footer summary::-webkit-details-marker {
+    display: none;
+}*/
+
+footer summary:nth-of-type() header a:hover {
+    color: var(--secondarycolor-background);
+}
+
+/*https://codepen.io/SitePoint/pen/gOqYGPZ*/
+
+
+
+/*Nederland en logo*/
+footer li a {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+
+}
+
+footer li a img {
+    width: 1.5em;
+
+}
+
+footer li a p {
+    font-family: "Obviously-Narrow";
+    text-transform: uppercase;
+    font-size: small;
+
+}
+
+
+li::marker {
+    content: '';
+}
+
+/*content leeg maken geholpen door Viresh*/
+
+
+
+
+/* @media (min-width:57em) {
+    footer details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column: 1/2;
+        padding-inline: 9em;
+    }
+
+    footer>ul:last-of-type svg {
+        grid-column-start: 4;
+        grid-row: 2;
+    }
+
+    details:nth-of-type(1) summary {
+        grid-column: 1/2;
+    }
+
+    details:nth-of-type(2) summary {
+        grid-column: 3/4;
+    }
+
+    footer a {
+        grid-column: 2/3;
+    }
+} */
