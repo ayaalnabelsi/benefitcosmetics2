@@ -79,7 +79,7 @@ body {
 /* https://codepen.io/studiojvla/pen/qVbQqW?editors=1100 */
 main>ul {
     display: flex;
-    background-color:var( --footercolor);
+    background-color: var(--footercolor);
     overflow-x: hidden;
     padding: 1.5em;
     margin: 0;
@@ -112,7 +112,7 @@ main>ul li {
 
 /*Section Mening Van Onze Experts*/
 main section:nth-of-type(2) {
-    background-color: var(   --ulcolor);
+    background-color: var(--ulcolor);
 
 }
 
@@ -143,9 +143,8 @@ main section:nth-of-type(2)>p {
 
 
 main section:nth-of-type(2) h3 {
-    align-self: center;
+align-self:  center;
     font-family: "roslindale-display";
-
 }
 
 main section:nth-of-type(2) ul {
@@ -166,19 +165,25 @@ main section:nth-of-type(2) li {
     background: var(--footer-color);
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
-    width: 50%;
+    width: 60%;
+    height: 110%;
+    
 }
 
 main section:nth-of-type(2) img {
     order: -1;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
+    border-top-right-radius: 0.10em;
+    border-top-left-radius:  0.10em;
+
 }
 
 
 
 video {
-    height: 60em;
+    height: 45em;
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 /*HEB JE VRAGEN a*/
@@ -189,7 +194,7 @@ main section:nth-of-type(3) {
 }
 
 main section:nth-of-type(3) details {
-    border-radius: 2em; 
+    border-radius: 2em;
     background: var(--color-background);
     margin: 0.6em;
     padding-bottom: 0.5em;
@@ -229,20 +234,22 @@ main section:nth-of-type(3) summary {
 
 @media (min-width:57em) {
 
-    main section:nth-of-type(3) details{
-        width:50%;
+    main section:nth-of-type(3) details {
+        width: 50%;
         justify-self: center;
     }
-    main section:nth-of-type(3) p{
+
+    main section:nth-of-type(3) p {
         font-size: 3em;
         font-size: xx-small;
         padding-left: 1.5em;
         padding-right: 1.5em;
+        
     }
+
     main section:nth-of-type(3)>p {
         justify-self: center;
         font-family: "roslindale-display";
-        font-size:3em;
     }
 }
 
@@ -287,37 +294,3 @@ main summary:nth-of-type() header a:hover {
 }
 
 /*https://codepen.io/SitePoint/pen/gOqYGPZ*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*section:nth-of-type(1){ 
-   /background-color:#fccad9; 
-    /*display: flex;}
-
-section:nth-of-type(1) ul{
-    display: flex;
-    scrollbar-width: thin;
-    scrollbar-color: red;
-}
-
-section:nth-of-type(1) li {
-    width: min[80%, 40em];
-    flex-shrink:0;
-}
-
-section:nth-of-type(1) img {
-    order:-1;
-}

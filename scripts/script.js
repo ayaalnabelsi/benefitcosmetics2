@@ -30,7 +30,7 @@ function sluitMenu() {
 
 
 
-
+//socialmediaiconen//
 
 const button = document.querySelector("li button");
 const root = document.querySelector(":root");
@@ -53,3 +53,30 @@ function changeContrast() {
 
 
 
+//geholpen door Viresh// 
+// ----------------------------------open details op desktop----------------------------------
+// Selecteer details elementen in de footer
+const footerDetails = document.querySelectorAll("footer details");
+ 
+// hiermee controleren we als sde scherm breedte tenminste 900px breed is
+const mediaQuery = window.matchMedia("(min-width: 900px)");
+ 
+// open of close de details elementen op basis van schermbreedte
+function openDetails() {
+  footerDetails.forEach(detail => {
+    // Controleer of de viewport ≥ 900px is
+    if (mediaQuery.matches) {
+      // true: voeg het open toe aan het details element
+      detail.setAttribute("open", "");
+    } else {
+      // false: haal open weg van het details element
+      detail.removeAttribute("open");
+    }
+  });
+}
+ 
+// Luister naar veranderingen in de viewport en voer functie uit
+mediaQuery.addEventListener("change", openDetails);
+ 
+// Voer functie een keer uit bij het laden van de pagina. zonder dit is zijn de details elementen dicht als je de website op desktop open maakt
+openDetails();

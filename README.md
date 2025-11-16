@@ -7,9 +7,6 @@ Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
 
 
-
-
-
 ## Jij
 
 <details open>
@@ -22,7 +19,6 @@ Blauw
   #### Je focus:
 Responsive 
 </details>
-
 
 
 
@@ -56,10 +52,17 @@ Responsive
 <img src="readme-images/WCAG1.png" width="375px" alt="wcag">
 <img src="readme-images/WCAG2.png" width="375px" alt="wcag">
 <img src="readme-images/WCAG3.png" width="375px" alt="wcag">
+<img src="readme-images/WCAG4.png" width="375px" alt="wcag">
+<img src="readme-images/WCAG5.png" width="375px" alt="wcag">
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
-
+Bevindingen van punten die nog niet zijn toegepast
+- Valideer je HTML-code.
+- Koptekstelementen heading moeten in een logische volgorde worden geschreven.
+Sla geen kopniveau’s over bijv. niet van h1 naar h3 
+- Zorg dat decoratieve afbeeldingen een lege alt-tekst hebben.
+- Voor afbeeldingen die tekst bevatten, moet de alt beschrijving dezelfde tekst bevatten.
+- Controleer of zowel donkere als lichte modus worden ondersteund.
 </details>
 
 
@@ -73,9 +76,6 @@ Responsive
   <img src="readme-images/pagina 1.jpg" width="375px" alt="breakdown homepage">
     <img src="readme-images/pagina 2.jpg" width="375px" alt="breakdown behandelingpage">
 </details>
-
-
-
 
 
 ## Voortgang 1 (week 2)
@@ -155,20 +155,27 @@ Responsive
 </details>
 
 
-
-
-
 ## Toegankelijkheidstest 2/2 (week 4)
 
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
+<img src="readme-images/Test1.png" width="375px" alt="wcag">
+<img src="readme-images/Test2.png" width="375px" alt="wcag">
+<img src="readme-images/Test3.png" width="375px" alt="wcag">
+<img src="readme-images/Test4.png" width="375px" alt="wcag">
+<img src="readme-images/Test5.png" width="375px" alt="wcag">
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is)
 
+(Wat er verbeterd is)
+- Valideer je HTML-code.
+- Koptekstelementen heading moeten in een logische volgorde worden geschreven.
+- Sla geen kopniveau’s over bijv. niet van h1 naar h3 
+- Zorg dat decoratieve afbeeldingen een lege alt-tekst hebben.
+- Voor afbeeldingen die tekst bevatten, moet de alt beschrijving dezelfde tekst bevatten.
+- Controleer of zowel donkere als lichte modus worden ondersteund.
 </details>
-
-
 
 
 
@@ -184,7 +191,6 @@ Responsive
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  
   Student 1 Aya| grid fixen, contrast iconen met javascript
 
   Student 2 Patoune|  Hoe zet ik een video in mijn html met controls. En hoe style ik de summary’s in m’n footer
@@ -214,18 +220,20 @@ Responsive
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Ik heb geleerd hoe ik een video element kan toepassen. Daarnaast heb ik veel met grid geoefend en mezelf daarin verder ontwikkeld. Met behulp van de studentassistent heb ik geleerd hoe ik het contrast van socialmedia iconen kan aanpassen en hoe ik geanimeerde tekst kan creëren. Ook heb ik van Sanne geleerd hoe ik animaties kan toepassen, zoals draaien, stoppen en andere effecten.
+    <img src="readme-images/video.png" width="375px" alt="top">
+    <img src="readme-images/contrast.png" width="375px" alt="top">
+    <img src="readme-images/animatie.png" width="375px" alt="top">
+    <img src="readme-images/geanimeerde tekst.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Op groot scherm moet de volledige inhoud van mijn footer zichtbaar zijn. Daarnaast moeten de pijltjes van de summary elementen op grote schermen verborgen worden, en de lijstitems ul binnen de summary moeten standaard open onder elkaar worden weergegeven. Dit is me niet helemaal gelukt, vooral het verbergen van de pijltjes vond ik lastig.
+
+  <img src="readme-images/Bummer.png" width="375px" alt="bummer">
 </details>
-
-
-
 
 
 ## Bronnenlijst
@@ -237,8 +245,19 @@ Responsive
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. <!--https://www.svgrepo.com/svg/513450/location-pin?edit=true-->
+  2. <!--https://www.svgrepo.com/svg/473806/tiktok?edit=true-->
+	3. <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/target -->
+	4. <!--https://www.svgrepo.com/svg/513089/youtube-168?edit=true-->
+  5. <!--https://codepen.io/studiojvla/pen/qVbQqW?editors=1100 -->
+  6. <!--https://www.svgrepo.com/svg/513450/location-pin?edit=true-->
+	7. <!--https://www.svgrepo.com/svg/473806/tiktok?edit=true-->
+	8. <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/target -->
+	9. <!--https://www.svgrepo.com/svg/513089/youtube-168?edit=true-->
+  10. <!--https://codepen.io/studiojvla/pen/qVbQqW?editors=1100-->
+  11. <!--https://codepen.io/SitePoint/pen/gOqYGPZ-->
+  12. <!--> https://codepen.io/ayaalnabelsi/pen/RNrPrWW-->
+  13. <!--https://codepen.io/SitePoint/pen/gOqYGPZ-->
+  14. <!--https://codepen.io/SitePoint/pen/gOqYGPZ-->
 
 </details>
