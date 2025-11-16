@@ -69,6 +69,15 @@ main section:nth-of-type(1) a {
     padding-bottom: 1em;
 }
 
+@media (min-width:57em) {
+
+main section:nth-of-type(1) img {
+	height: 50em;
+    width: 100%;
+}
+}
+
+
 /* Geanimeerde P*/
 /*Geholpen door Viresh*/
 body {
@@ -110,6 +119,8 @@ main>ul li {
     /*Geholpen door Viresh*/
 }
 
+
+
 /*Section Mening Van Onze Experts*/
 main section:nth-of-type(2) {
     background-color: var(--ulcolor);
@@ -129,8 +140,7 @@ h2 {
 main section:nth-of-type(2) p {
     margin: 0;
     font-family: "obviously-refular";
-    font-size: small;
-
+padding-inline: 1em;
 }
 
 /*go with the pros*/
@@ -138,13 +148,15 @@ main section:nth-of-type(2)>p {
     color: var(--textcolor2);
     justify-self: center;
     font-family: "obviously-super";
-    font-size: 3em
+    font-size: 3.5em;
 }
 
 
 main section:nth-of-type(2) h3 {
 align-self:  center;
     font-family: "roslindale-display";
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 main section:nth-of-type(2) ul {
@@ -162,7 +174,7 @@ main section:nth-of-type(2) li {
     display: flex;
     flex-direction: column;
     border: 2em;
-    background: var(--footer-color);
+    background: var( --footercolor);
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
     width: 60%;
@@ -177,6 +189,14 @@ main section:nth-of-type(2) img {
 
 }
 
+@media (min-width:57em) {
+
+main section:nth-of-type(2) ul {
+    height: 55em;
+    padding: 9em
+}
+
+}
 
 
 video {
@@ -224,7 +244,7 @@ main section:nth-of-type(3)>p {
 }
 
 main summary:nth-of-type(3) {
-    gap: 3em;
+    gap:3em;
 }
 
 main section:nth-of-type(3) summary {
@@ -235,8 +255,9 @@ main section:nth-of-type(3) summary {
 @media (min-width:57em) {
 
     main section:nth-of-type(3) details {
-        width: 50%;
+        width: 60%;
         justify-self: center;
+
     }
 
     main section:nth-of-type(3) p {
@@ -250,11 +271,9 @@ main section:nth-of-type(3) summary {
     main section:nth-of-type(3)>p {
         justify-self: center;
         font-family: "roslindale-display";
+        font-size: xx-large;
     }
 }
-
-
-
 
 /*************/
 /*  Pijltje Styling*/
@@ -294,3 +313,5 @@ main summary:nth-of-type() header a:hover {
 }
 
 /*https://codepen.io/SitePoint/pen/gOqYGPZ*/
+
+
